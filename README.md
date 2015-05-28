@@ -2,25 +2,25 @@
 
 Requirements: Octave/gnuplot or Matlab.
 
-* Quick start:
+Quick start:
 
-Create local directories
+* Create local directories
 $ mkdir bin && mkdir dat && mkdir err
 
-Invoke Octave
+* Invoke Octave
 $ octave
 
-Set a problem and run the solver.
+* Set a problem and run the solver.
 $ prob = 'RJ2a';
 $ exact_mhd_run;
 
-Print the solution.
+* Print the solution.
 $ print_states_mhd;
 
-Plot the solution.
+* Plot the solution.
 $ plot_mhd;
 
-Plot the perpendicular magnetic field.
+* Plot the perpendicular magnetic field.
 $ plot_bperp;
 
 
