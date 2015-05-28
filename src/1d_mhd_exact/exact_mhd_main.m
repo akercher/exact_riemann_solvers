@@ -233,7 +233,7 @@ if abs(bperp(end)) < tol
 end
 
 %-------------------------------------------------------------------------------
-% Compute the solution, here is where the majic happens.
+% Compute the solution, here is where the magic happens.
 %-------------------------------------------------------------------------------
 % solve for Riemann states in all regions
 if strcmp(Jacobian_method,'nested')
