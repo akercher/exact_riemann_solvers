@@ -383,7 +383,7 @@ end
 fprintf(fid,'\n');
 fprintf(fid,'structure positions: xstart, xend\n');
 for i=1:neigen
-  fprintf(fid,'% -0.4e % -0.4e\n',xpos(i,1),xpos(i,2));
+  fprintf(fid,'% -0.4e % -0.4e\n', grid_1d.xpos(i,1), grid_1d.xpos(i,2));
 end
 
 % close file
@@ -397,7 +397,7 @@ fprintf(fid,'wave speeds: -fast, -Alfven, -slow, slow, Alfven, fast\n');
 fprintf(fid,'% -0.*e % -0.*e % -0.*e % -0.*e % -0.*e % -0.*e\n',fmt_pre,wfl,fmt_pre,wal,fmt_pre,wsl,fmt_pre,wsr,fmt_pre,war,fmt_pre,wfr);
 else
 fprintf(fid,'wave speeds: -Magnetosonic, Magnetosonic\n');  
-fprintf(fid,'% -0.*e % -0.*e\n',fmt_pre,wmsl,fmt_pre,wmsr);  
+fprintf(fid,'% -0.*e % -0.*e\n', fmt_pre, wmsl, fmt_pre, wmsr);  
 end
 fprintf(fid,'\n');
 fprintf(fid,'state variables: rho, vx, vy, vz, by, bz, pg\n');
@@ -407,10 +407,10 @@ end
 fprintf(fid,'\n');
 fprintf(fid,'structure positions: xstart, xend\n');
 for i=1:neigen
-  fprintf(fid,'% -0.*e % -0.*e\n',fmt_pre,xpos(i,1),fmt_pre,xpos(i,2));
+  fprintf(fid,'% -0.*e % -0.*e\n', fmt_pre, grid_1d.xpos(i,1), fmt_pre, grid_1d.xpos(i,2));
 end
 
 % close files
-%* fclose(fid);
+fclose(fid);
 fclose(flog);
 fclose(flog_ws);
